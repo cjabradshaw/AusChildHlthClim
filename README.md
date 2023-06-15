@@ -1,4 +1,4 @@
-# AusChildHlthClim
+# Child health <em>versus</em> climate in Australia
 Australia SA3-level analysis of relationship between child mortality/morbidity and climate conditions
 <img align="right" src="www/ausminTcMoTransp.png" alt="minimum temperature of the coldest month" width="400" style="margin-top: 20px">
 <br>
