@@ -10,13 +10,15 @@ June 2023<br>
 <br>
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/scripts">Scripts</a>
-- <code>Coelacanth evolR-envir model.R</code> (developed by <a href="https://globalecologyflinders.com/people/#DIRECTOR">Corey Bradshaw</a>): R code to reproduce the resampled boosted regression tree analysis for determining the environmental drivers of Coelacanth rate of evolution.
+- <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics and climate.
 
-## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data">Data</a>
-- <em>coelacanthEvolRenvDat.csv</em>
+## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/brtdata">Data</a>
+- <em>alldat2.csv</em>
 
 ## Required R libraries
 - <code>dismo</code>
 - <code>gbm</code>
+- <code>mice</code>
+- <code>boot</code>
 
 <p><a href="https://www.flinders.edu.au"><img align="bottom-left" src="www/Flinders_University_Logo_Horizontal_RGB_Master.png" alt="Flinders University" width="150" style="margin-top: 20px"></a> &nbsp; <a href="https://globalecologyflinders.com"><img align="bottom-left" src="www/GEL Logo Kaurna New Transp.png" alt="GEL" width="85" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.uwa.edu.au/"><img align="bottom-left" src="www/uwa2.png" alt="UWA" width="100" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://www.telethonkids.org.au"><img align="bottom-left" src="www/tkilogo.png" alt="TKI" width="110" style="margin-top: 20px"></a>
