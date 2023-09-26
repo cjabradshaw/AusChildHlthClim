@@ -10,7 +10,7 @@ June 2023<br>
 <br>
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/scripts">Scripts</a>
-- <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics and climate.
+- <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics, climate, and air pollution.
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/brtdata">Data</a>
 - <em>healthclim.csv</em>
