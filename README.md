@@ -13,10 +13,10 @@ September 2023<br>
 - <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics, climate, and air pollution.
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/brtdata">Data</a>
-- <em>healthclim.csv</em>
-- <em>fire20132022relIndex.csv</em>
-- <em>NO2</em>: NO<sub>2</sub> pollution data (2010-2019)
-- <em>PM25</em>: PM<sub>2.5</sub> pollution data (2012-2021)
+- <em><a href="https://github.com/cjabradshaw/AusChildHlthClim/blob/main/data/climhealth/healthclim.csv">healthclim.csv</a></em>
+- <em><a href="https://github.com/cjabradshaw/AusChildHlthClim/blob/main/data/fire/fire20132022relIndex.csv">fire20132022relIndex.csv</a></em>
+- <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/NO2">NO2</a>: NO<sub>2</sub> pollution data (2010-2019)
+- <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/PM25">PM25</a>: PM<sub>2.5</sub> pollution data (2012-2021)
 
 ## Required R libraries
 - <code>dismo</code>
