@@ -10,7 +10,7 @@ September 2023<br>
 <br>
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/scripts">Scripts</a>
-- <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics, climate, and air pollution.
+- <code>SA3climateChildHealth.R</code>: R code to reproduce the resampled boosted regression tree analysis for determining the relationships between child-health metrics, climate, and air pollution at the scale of <a href="https://www.abs.gov.au/ausstats/abs@.nsf/Lookup/by%20Subject/1270.0.55.001~July%202016~Main%20Features~Statistical%20Area%20Level%203%20(SA3)~10015">Statistical Area Level 3</a> (SA3).
 
 ## <a href="https://github.com/cjabradshaw/AusChildHlthClim/tree/main/data/brtdata">Data</a>
 - <em><a href="https://github.com/cjabradshaw/AusChildHlthClim/blob/main/data/climhealth/healthclim.csv">healthclim.csv</a></em>
