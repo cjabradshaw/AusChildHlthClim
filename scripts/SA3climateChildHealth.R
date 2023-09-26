@@ -17,8 +17,8 @@ estBetaParams <- function(mu, var) {
   return(params = list(alpha = alpha, beta = beta))
 }
 
-## import data
-dat <- read.table("alldat3.csv", sep=",", header=T) # SA3-level data
+## import health and climate data
+dat <- read.table("~/healthclim/healthclim.csv", sep=",", header=T) # SA3-level data
 head(dat)
 
 ## population density
@@ -48,7 +48,7 @@ hist(dat$ISOTHERM_2)
 hist(log10(dat$PRCP_mean))
 
 ## fire index (indicator of bushsmoke exposure)
-fireind <- read.table("fire20132022relIndex.csv", header=T, sep=",")
+fireind <- read.table("~/fire/fire20132022relIndex.csv", header=T, sep=",")
 head(fireind)
 
 # merge with dat
@@ -59,53 +59,53 @@ hist(log10(datf$FIREIND))
 
 ## air pollution
 ## PM2.5
-pm25wsum2021 <- read.table("PM25aus2021ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2021 <- read.table("PM25aus2021ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2021 <- read.table("~/PM25/PM25aus2021ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2021 <- read.table("~/PM25/PM25aus2021ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2021 <- pm25wsum2021$PM25WSUM / pm25npts2021$PM25NPTS
 pm25wmn2021 <- ifelse(is.na(pm25wmn2021) == T, 0, pm25wmn2021)
 
-pm25wsum2020 <- read.table("PM25aus2020ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2020 <- read.table("PM25aus2020ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2020 <- read.table("~/PM25/PM25aus2020ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2020 <- read.table("~/PM25/PM25aus2020ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2020 <- pm25wsum2020$PM25WSUM / pm25npts2020$PM25NPTS
 pm25wmn2020 <- ifelse(is.na(pm25wmn2020) == T, 0, pm25wmn2020)
 
-pm25wsum2019 <- read.table("PM25aus2019ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2019 <- read.table("PM25aus2019ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2019 <- read.table("~/PM25/PM25aus2019ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2019 <- read.table("~/PM25/PM25aus2019ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2019 <- pm25wsum2019$PM25WSUM / pm25npts2019$PM25NPTS
 pm25wmn2019 <- ifelse(is.na(pm25wmn2019) == T, 0, pm25wmn2019)
 
-pm25wsum2018 <- read.table("PM25aus2018ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2018 <- read.table("PM25aus2018ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2018 <- read.table("~/PM25/PM25aus2018ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2018 <- read.table("~/PM25/PM25aus2018ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2018 <- pm25wsum2018$PM25WSUM / pm25npts2018$PM25NPTS
 pm25wmn2018 <- ifelse(is.na(pm25wmn2018) == T, 0, pm25wmn2018)
 
-pm25wsum2017 <- read.table("PM25aus2017ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2017 <- read.table("PM25aus2017ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2017 <- read.table("~/PM25/PM25aus2017ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2017 <- read.table("~/PM25/PM25aus2017ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2017 <- pm25wsum2017$PM25WSUM / pm25npts2017$PM25NPTS
 pm25wmn2017 <- ifelse(is.na(pm25wmn2017) == T, 0, pm25wmn2017)
 
-pm25wsum2016 <- read.table("PM25aus2016ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2016 <- read.table("PM25aus2016ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2016 <- read.table("~/PM25/PM25aus2016ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2016 <- read.table("~/PM25/PM25aus2016ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2016 <- pm25wsum2016$PM25WSUM / pm25npts2016$PM25NPTS
 pm25wmn2016 <- ifelse(is.na(pm25wmn2016) == T, 0, pm25wmn2016)
 
-pm25wsum2015 <- read.table("PM25aus2015ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2015 <- read.table("PM25aus2015ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2015 <- read.table("~/PM25/PM25aus2015ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2015 <- read.table("~/PM25/PM25aus2015ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2015 <- pm25wsum2015$PM25WSUM / pm25npts2015$PM25NPTS
 pm25wmn2015 <- ifelse(is.na(pm25wmn2015) == T, 0, pm25wmn2015)
 
-pm25wsum2014 <- read.table("PM25aus2014ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2014 <- read.table("PM25aus2014ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2014 <- read.table("~/PM25/PM25aus2014ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2014 <- read.table("~/PM25/PM25aus2014ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2014 <- pm25wsum2014$PM25WSUM / pm25npts2014$PM25NPTS
 pm25wmn2014 <- ifelse(is.na(pm25wmn2014) == T, 0, pm25wmn2014)
 
-pm25wsum2013 <- read.table("PM25aus2013ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2013 <- read.table("PM25aus2013ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2013 <- read.table("~/PM25/PM25aus2013ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2013 <- read.table("~/PM25/PM25aus2013ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2013 <- pm25wsum2013$PM25WSUM / pm25npts2013$PM25NPTS
 pm25wmn2013 <- ifelse(is.na(pm25wmn2013) == T, 0, pm25wmn2013)
 
-pm25wsum2012 <- read.table("PM25aus2012ptsWsumSA3.csv", header=T, sep=",")
-pm25npts2012 <- read.table("PM25aus2012ptsNptsSA3.csv", header=T, sep=",")
+pm25wsum2012 <- read.table("~/PM25/PM25aus2012ptsWsumSA3.csv", header=T, sep=",")
+pm25npts2012 <- read.table("~/PM25/PM25aus2012ptsNptsSA3.csv", header=T, sep=",")
 pm25wmn2012 <- pm25wsum2012$PM25WSUM / pm25npts2012$PM25NPTS
 pm25wmn2012 <- ifelse(is.na(pm25wmn2012) == T, 0, pm25wmn2012)
 
@@ -124,28 +124,28 @@ head(datfpm)
 hist((datfpm$PM25mn))
 
 ## NO2
-NO2wsum2019 <- read.table("NO2aus2019ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2019 <- read.table("NO2aus2019ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2019 <- read.table("~/NO2/NO2aus2019ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2019 <- read.table("~/NO2/NO2aus2019ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2019 <- NO2wsum2019$NO2WSUM / NO2npts2019$NO2NPTS
 NO2wmn2019 <- ifelse(is.na(NO2wmn2019) == T, 0, NO2wmn2019)
 
-NO2wsum2018 <- read.table("NO2aus2018ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2018 <- read.table("NO2aus2018ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2018 <- read.table("~/NO2/NO2aus2018ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2018 <- read.table("~/NO2/NO2aus2018ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2018 <- NO2wsum2018$NO2WSUM / NO2npts2018$NO2NPTS
 NO2wmn2018 <- ifelse(is.na(NO2wmn2018) == T, 0, NO2wmn2018)
 
-NO2wsum2017 <- read.table("NO2aus2017ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2017 <- read.table("NO2aus2017ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2017 <- read.table("~/NO2/NO2aus2017ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2017 <- read.table("~/NO2/NO2aus2017ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2017 <- NO2wsum2017$NO2WSUM / NO2npts2017$NO2NPTS
 NO2wmn2017 <- ifelse(is.na(NO2wmn2017) == T, 0, NO2wmn2017)
 
-NO2wsum2016 <- read.table("NO2aus2016ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2016 <- read.table("NO2aus2016ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2016 <- read.table("~/NO2/NO2aus2016ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2016 <- read.table("~/NO2/NO2aus2016ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2016 <- NO2wsum2016$NO2WSUM / NO2npts2016$NO2NPTS
 NO2wmn2016 <- ifelse(is.na(NO2wmn2016) == T, 0, NO2wmn2016)
 
-NO2wsum2015 <- read.table("NO2aus2015ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2015 <- read.table("NO2aus2015ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2015 <- read.table("~/NO2/NO2aus2015ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2015 <- read.table("~/NO2/NO2aus2015ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2015 <- NO2wsum2015$NO2WSUM / NO2npts2015$NO2NPTS
 NO2wmn2015 <- ifelse(is.na(NO2wmn2015) == T, 0, NO2wmn2015)
 
@@ -154,23 +154,23 @@ NO2npts2014 <- read.table("NO2aus2014ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2014 <- NO2wsum2014$NO2WSUM / NO2npts2014$NO2NPTS
 NO2wmn2014 <- ifelse(is.na(NO2wmn2014) == T, 0, NO2wmn2014)
 
-NO2wsum2013 <- read.table("NO2aus2013ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2013 <- read.table("NO2aus2013ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2013 <- read.table("~/NO2/NO2aus2013ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2013 <- read.table("~/NO2/NO2aus2013ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2013 <- NO2wsum2013$NO2WSUM / NO2npts2013$NO2NPTS
 NO2wmn2013 <- ifelse(is.na(NO2wmn2013) == T, 0, NO2wmn2013)
 
-NO2wsum2012 <- read.table("NO2aus2012ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2012 <- read.table("NO2aus2012ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2012 <- read.table("~/NO2/NO2aus2012ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2012 <- read.table("~/NO2/NO2aus2012ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2012 <- NO2wsum2012$NO2WSUM / NO2npts2012$NO2NPTS
 NO2wmn2012 <- ifelse(is.na(NO2wmn2012) == T, 0, NO2wmn2012)
 
-NO2wsum2011 <- read.table("NO2aus2011ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2011 <- read.table("NO2aus2011ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2011 <- read.table("~/NO2/NO2aus2011ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2011 <- read.table("~/NO2/NO2aus2011ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2011 <- NO2wsum2011$NO2WSUM / NO2npts2011$NO2NPTS
 NO2wmn2011 <- ifelse(is.na(NO2wmn2011) == T, 0, NO2wmn2011)
 
-NO2wsum2010 <- read.table("NO2aus2010ptsWsumSA3.csv", header=T, sep=",")
-NO2npts2010 <- read.table("NO2aus2010ptsNptsSA3.csv", header=T, sep=",")
+NO2wsum2010 <- read.table("~/NO2/NO2aus2010ptsWsumSA3.csv", header=T, sep=",")
+NO2npts2010 <- read.table("~/NO2/NO2aus2010ptsNptsSA3.csv", header=T, sep=",")
 NO2wmn2010 <- NO2wsum2010$NO2WSUM / NO2npts2010$NO2NPTS
 NO2wmn2010 <- ifelse(is.na(NO2wmn2010) == T, 0, NO2wmn2010)
 
